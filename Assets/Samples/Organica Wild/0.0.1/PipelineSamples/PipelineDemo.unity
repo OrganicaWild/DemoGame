@@ -1197,7 +1197,7 @@ PrefabInstance:
     - target: {fileID: 7017204873799359, guid: c861e81feb9206d4fb8d04c66e6c09ac, type: 3}
       propertyPath: recipes.Array.data[11].recipe
       value: 
-      objectReference: {fileID: 11400000, guid: 9e3689b0f72f042c9b3987ddac54f7d7,
+      objectReference: {fileID: 11400000, guid: eb130b97bf25c476ca029b8882db5adc,
         type: 2}
     - target: {fileID: 7017204873799359, guid: c861e81feb9206d4fb8d04c66e6c09ac, type: 3}
       propertyPath: recipes.Array.data[20].recipe
