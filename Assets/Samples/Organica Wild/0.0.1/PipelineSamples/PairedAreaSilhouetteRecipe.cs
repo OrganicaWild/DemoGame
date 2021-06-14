@@ -2,7 +2,6 @@ using System;
 using System.Linq;
 using Framework.Pipeline.GameWorldObjects;
 using Framework.Pipeline.Geometry;
-using Framework.Pipeline.Geometry.Interactors;
 using Framework.Pipeline.Standard.ThemeApplicator.Recipe;
 using Framework.Util;
 using UnityEngine;
@@ -19,14 +18,23 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples
         public int radius;
         
         public GameObject[] flowerPrefabs;
-        public Vector2Int size;
-        public Vector2 distance;
-        public float minScale;
-        public float maxScale;
+       
+        public int rings;
+        public float minRadius;
+        public float maxRadius;
+        public int ringResolution;
+        public float staticScaleFactor;
+        
+        public GameObject toSpawn;
+        public float secondsToSpawn;
         
         public override GameObject Cook(IGameWorldObject individual)
         {
             OwPolygon polygon = individual.Shape as OwPolygon;
+            if (polygon == null)
+            {
+                return new GameObject();
+            }
             GameObject mesh;
             try
             {
@@ -37,77 +45,79 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples
                 Console.WriteLine(e);
                 mesh = new GameObject();
             }
-
+            
+            Rect boundingBox = polygon.GetBoundingBox();
+            BoxCollider collider = mesh.AddComponent<BoxCollider>();
+            collider.isTrigger = true;
+            collider.center = (new Vector3(boundingBox.center.x, 0, boundingBox.center.y));
+            collider.size = new Vector3(boundingBox.width, 20,boundingBox.height);
+            
+            ConnectedAreaTrigger connectedAreaTrigger = mesh.AddComponent<ConnectedAreaTrigger>();
+            string groupString  = individual.Type.Replace("landmarkPair", "");
+            connectedAreaTrigger.partOfGroupX = int.Parse(groupString);
+            connectedAreaTrigger.toSpawn = toSpawn;
+            connectedAreaTrigger.spawnPoint = new Vector3(boundingBox.center.x, 2, boundingBox.center.y);
+            connectedAreaTrigger.secondsToWait = secondsToSpawn;
+            
             Random localRandom = new Random(individual.Type.Sum(x => x));
 
-            var numberOfDefiningPrefabs = (int) (localRandom.NextDouble() * maxPrefabs);  
+            int numberOfDefiningPrefabs = (int) (localRandom.NextDouble() * maxPrefabs);  
             
             if (numberOfDefiningPrefabs < 3)
             {
                 if (numberOfDefiningPrefabs == 1)
                 {
-                    var prefab = silhouetteDefiningPrefabs[(int)(localRandom.NextDouble() * (silhouetteDefiningPrefabs.Length - 1))];
-                    var instantiated = GameObjectCreation.InstantiatePrefab(prefab, polygon.GetCentroid());
+                    GameObject prefab = silhouetteDefiningPrefabs[(int)(localRandom.NextDouble() * (silhouetteDefiningPrefabs.Length - 1))];
+                    GameObject instantiated = GameObjectCreation.InstantiatePrefab(prefab, polygon.GetCentroid());
                     instantiated.transform.parent = mesh.transform;
                 }
                 else
                 {
                     //maxPrefabs = 2
-                    var randomVector = Vector2Extensions.GetRandomNormalizedVector(localRandom);
+                    Vector2 randomVector = Vector2Extensions.GetRandomNormalizedVector(localRandom);
                     randomVector *= radius;
                     
-                    var prefab = silhouetteDefiningPrefabs[(int)(localRandom.NextDouble() * (silhouetteDefiningPrefabs.Length - 1))];
-                    var instantiated = GameObjectCreation.InstantiatePrefab(prefab, polygon.GetCentroid() + randomVector);
+                    GameObject prefab = silhouetteDefiningPrefabs[(int)(localRandom.NextDouble() * (silhouetteDefiningPrefabs.Length - 1))];
+                    GameObject instantiated = GameObjectCreation.InstantiatePrefab(prefab, polygon.GetCentroid() + randomVector);
                     instantiated.transform.parent = mesh.transform;
                     
-                    var prefab1 = silhouetteDefiningPrefabs[(int)(localRandom.NextDouble() * (silhouetteDefiningPrefabs.Length - 1))];
-                    var instantiated1 = GameObjectCreation.InstantiatePrefab(prefab1, polygon.GetCentroid() - randomVector);
+                    GameObject prefab1 = silhouetteDefiningPrefabs[(int)(localRandom.NextDouble() * (silhouetteDefiningPrefabs.Length - 1))];
+                    GameObject instantiated1 = GameObjectCreation.InstantiatePrefab(prefab1, polygon.GetCentroid() - randomVector);
                     instantiated1.transform.parent = mesh.transform;
                 }
             }
             else
             {
-                var circle = new OwCircle(polygon.GetCentroid(), radius, numberOfDefiningPrefabs);
+                OwCircle circle = new OwCircle(polygon.GetCentroid(), radius, numberOfDefiningPrefabs);
 
-                foreach (var point in circle.GetPoints())
+                foreach (Vector2 point in circle.GetPoints())
                 {
-                    var prefab = silhouetteDefiningPrefabs[(int)(localRandom.NextDouble() * (silhouetteDefiningPrefabs.Length - 1))];
-                    var instantiated = GameObjectCreation.InstantiatePrefab(prefab, point);
+                    GameObject prefab = silhouetteDefiningPrefabs[(int)(localRandom.NextDouble() * (silhouetteDefiningPrefabs.Length - 1))];
+                    GameObject instantiated = GameObjectCreation.InstantiatePrefab(prefab, point);
                     instantiated.transform.parent = mesh.transform;
                 }
             }
             
-            float[,] noiseMap =
-                PerlinNoise.GenerateNoiseMap(localRandom, size.x, size.y, 20, 6, 2, 1, Vector2.zero);
-            Vector2 center = individual.Shape.GetCentroid();
-
-            Vector2 start = center - size / 2;
-            Vector2 xStep = new Vector2(distance.x, 0);
-            Vector2 yStep = new Vector2(0, distance.y);
-
-            for (int x = 0; x < size.x; x++)
+            float radiusPerRing = (maxRadius - minRadius) / rings;
+            
+            for (int i = 1; i <= rings; i++)
             {
-                for (int y = 0; y < size.y; y++)
+                OwCircle circle = new OwCircle(polygon.GetCentroid(), minRadius + radiusPerRing * i, ringResolution);
+                float scale = (maxRadius - i * radiusPerRing) * staticScaleFactor;
+                //float scale = 1;
+                
+                foreach (Vector2 point in circle.GetPoints())
                 {
-                    float noiseValue = noiseMap[x, y];
-                    
-                    Vector2 pos = start + x * xStep + y * yStep;
-                    Vector2 offset = Vector2Extensions.GetRandomNormalizedVector(localRandom) / distance;
-                    pos += offset;
+                    Vector2 offset = (Vector2Extensions.GetRandomNormalizedVector(localRandom) - new Vector2(0.5f, 0.5f)) / (maxRadius - i * radiusPerRing);
+                    Vector2 position = point;
+                    position += offset;
 
-                    bool isContained =
-                        PolygonPointInteractor.Use().Contains(polygon, new OwPoint(pos));
-
-                    if (isContained )//&& noiseValue > 0.5)
-                    {
-                        float scale = (float) (localRandom.NextDouble() * (maxScale - minScale) + minScale);
-                        
-                        GameObject instantiated =
-                            GameObjectCreation.InstantiatePrefab(flowerPrefabs[(int) (localRandom.NextDouble() * flowerPrefabs.Length)],
-                                pos);
-                        instantiated.transform.parent = mesh.transform;
-                        instantiated.transform.localScale = new Vector3(scale, scale, scale);
-                    }
+                    GameObject prefab = flowerPrefabs[(int) (localRandom.NextDouble() * flowerPrefabs.Length)];
+                    GameObject instantiated =
+                        GameObjectCreation.InstantiatePrefab(prefab,
+                            position);
+                    instantiated.transform.parent = mesh.transform;
+                    instantiated.transform.localScale = prefab.transform.localScale * scale;
                 }
             }
             

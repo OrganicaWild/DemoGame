@@ -55,7 +55,6 @@
      <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\PairedAreaSilhouetteRecipe.cs" />
      <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\ActivateAllChildrenUponGameManagerStart.cs" />
      <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\ConnectedAreaTrigger.cs" />
-     <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\ConnectedTrigger.cs" />
      <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\GameManager.cs" />
      <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\LoadScene.cs" />
      <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\LoadSceneOnTriggerEnter.cs" />
@@ -637,9 +636,6 @@
  <Reference Include="mscorlib">
  <HintPath>/Applications/Unity/Hub/Editor/2019.4.26f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/mscorlib.dll</HintPath>
  </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include=".gitignore" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
