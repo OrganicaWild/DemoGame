@@ -50,9 +50,11 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\AreaSizeCounter.cs" />
      <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\LandmarkAreaStep.cs" />
      <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\PairedAreaFlowerRingRecipe.cs" />
      <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\PairedAreaSilhouetteRecipe.cs" />
+     <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\PathLengthCounter.cs" />
      <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\ActivateAllChildrenUponGameManagerStart.cs" />
      <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\ConnectedAreaTrigger.cs" />
      <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\GameManager.cs" />
@@ -66,17 +68,8 @@
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
- <Reference Include="Cinemachine">
- <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
- </Reference>
  <Reference Include="Unity.VSCode.Editor">
  <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
- </Reference>
- <Reference Include="ch.i4ds.Framework">
- <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/ch.i4ds.Framework.dll</HintPath>
- </Reference>
- <Reference Include="Unity.InputSystem">
- <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
@@ -93,17 +86,26 @@
  <Reference Include="Unity.Rider.Editor">
  <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
- <Reference Include="ch.i4ds.polyboolnet">
- <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/ch.i4ds.polyboolnet.dll</HintPath>
- </Reference>
- <Reference Include="com.unity.cinemachine.editor">
- <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
- </Reference>
  <Reference Include="Unity.TextMeshPro">
  <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="Cinemachine">
+ <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+ </Reference>
+ <Reference Include="ch.i4ds.Framework">
+ <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/ch.i4ds.Framework.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.InputSystem">
+ <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
+ </Reference>
+ <Reference Include="ch.i4ds.polyboolnet">
+ <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/ch.i4ds.polyboolnet.dll</HintPath>
+ </Reference>
+ <Reference Include="com.unity.cinemachine.editor">
+ <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Hub/Editor/2019.4.26f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -289,7 +291,7 @@
  <HintPath>/Applications/Unity/Hub/Editor/2019.4.26f1/Unity.app/Contents/Managed/UnityEditor.dll</HintPath>
  </Reference>
  <Reference Include="Tektosyne.Core">
- <HintPath>/Users/cvoegele/Development/DemoGame/Library/PackageCache/ch.i4ds.organicawild@5753a2112e/External/PolyBool.Net/Code/Tektosyne.Core.dll</HintPath>
+ <HintPath>/Users/cvoegele/Development/DemoGame/Library/PackageCache/ch.i4ds.organicawild@76a0c13d81/External/PolyBool.Net/Code/Tektosyne.Core.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>/Applications/Unity/Hub/Editor/2019.4.26f1/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
