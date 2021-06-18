@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78eb617c1341416986665c568c099668, type: 3}
   m_Name: RockiSihlouetteRecipe
   m_EditorClassIdentifier: 
-  floorMaterial: {fileID: 2100000, guid: 2189ba92ac7e130449e67d6bdc957143, type: 2}
+  floorMaterials:
+  - {fileID: 2100000, guid: 2189ba92ac7e130449e67d6bdc957143, type: 2}
   silhouetteDefiningPrefabs:
   - {fileID: 128044, guid: 85f4229977c9ee247bc4425710c5b0c4, type: 3}
   - {fileID: 120164, guid: 61b490990a08faa419b1bb6a6708ad09, type: 3}

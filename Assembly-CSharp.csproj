@@ -291,7 +291,7 @@
  <HintPath>/Applications/Unity/Hub/Editor/2019.4.26f1/Unity.app/Contents/Managed/UnityEditor.dll</HintPath>
  </Reference>
  <Reference Include="Tektosyne.Core">
- <HintPath>/Users/cvoegele/Development/DemoGame/Library/PackageCache/ch.i4ds.organicawild@76a0c13d81/External/PolyBool.Net/Code/Tektosyne.Core.dll</HintPath>
+ <HintPath>/Users/cvoegele/Development/DemoGame/Library/PackageCache/ch.i4ds.organicawild@8bee0bd129/External/PolyBool.Net/Code/Tektosyne.Core.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>/Applications/Unity/Hub/Editor/2019.4.26f1/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll</HintPath>

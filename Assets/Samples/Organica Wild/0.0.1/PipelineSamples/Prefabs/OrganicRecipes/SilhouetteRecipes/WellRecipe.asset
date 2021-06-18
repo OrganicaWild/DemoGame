@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 78eb617c1341416986665c568c099668, type: 3}
   m_Name: WellRecipe
   m_EditorClassIdentifier: 
-  floorMaterial: {fileID: 2100000, guid: 2189ba92ac7e130449e67d6bdc957143, type: 2}
+  floorMaterials:
+  - {fileID: 2100000, guid: 2189ba92ac7e130449e67d6bdc957143, type: 2}
   silhouetteDefiningPrefabs:
   - {fileID: 1508764703267524, guid: 09dd70b4470036f4988070b63e2ae21c, type: 3}
   maxPrefabs: 1
