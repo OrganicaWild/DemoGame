@@ -6,6 +6,24 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Samples/Organica Wild/0.0.1/PipelineSamples/StartScene.unity
+    guid: 8fbcf6d25b055de498822079ff9af023
+  - enabled: 1
     path: Assets/Samples/Organica Wild/0.0.1/PipelineSamples/Scenes/Base.unity
     guid: 7a98ac0a84b1d6c48b2462beed3b0377
+  - enabled: 1
+    path: Assets/Samples/Organica Wild/0.0.1/PipelineSamples/Scenes/BigAreas.unity
+    guid: 3eb65c62d0ee14e60a92efdd47eaf6c4
+  - enabled: 1
+    path: Assets/Samples/Organica Wild/0.0.1/PipelineSamples/Scenes/Colors.unity
+    guid: 3caef1be3e67a4cdc87bddc7eb59162a
+  - enabled: 1
+    path: Assets/Samples/Organica Wild/0.0.1/PipelineSamples/Scenes/Cycles.unity
+    guid: 771346c6c1b4e43799b34c39d5363006
+  - enabled: 1
+    path: Assets/Samples/Organica Wild/0.0.1/PipelineSamples/Scenes/LongPaths.unity
+    guid: d99a08a37c7414e21823de777b3843fb
+  - enabled: 1
+    path: Assets/Samples/Organica Wild/0.0.1/PipelineSamples/Scenes/Silhouettes.unity
+    guid: 666aceca17e304058a0c5fed3691b804
   m_configObjects: {}
