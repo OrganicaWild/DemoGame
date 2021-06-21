@@ -15,8 +15,7 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
             int totalAreas = GameManager.uniqueAreasAmount;
             int foundAreas = GameManager.foundAreas;
 
-            scoreText.text = $"{foundAreas} von {totalAreas} einzigartigen Gebietsarten gefunden";
-            prevScore = foundAreas;
+           
         }
     }
 }

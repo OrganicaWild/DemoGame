@@ -55,8 +55,8 @@
      <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\ConnectedAreaTrigger.cs" />
      <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\DataPack.cs" />
      <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\GameManager.cs" />
+     <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\IntermediarySceneManager.cs" />
      <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\LandmarkAreaStep.cs" />
-     <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\LoadScene.cs" />
      <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\LoadSceneOnTriggerEnter.cs" />
      <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\PairedAreaFlowerRingRecipe.cs" />
      <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\PairedAreaSilhouetteRecipe.cs" />
@@ -65,12 +65,22 @@
      <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\PlayerCharacter\PlayerInput.cs" />
      <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\PlayerCharacter\RotateByTime.cs" />
      <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\ScoreUpdater.cs" />
+     <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\SendComment.cs" />
      <None Include="Assets\Samples\Organica Wild\0.0.1\SampleAssets\AssetStore\BrokenVector\LowPolyTreePack\README.txt" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
+ <Reference Include="Cinemachine">
+ <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+ </Reference>
  <Reference Include="Unity.VSCode.Editor">
  <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.OrganicaWild.Framework">
+ <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/Unity.OrganicaWild.Framework.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.InputSystem">
+ <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
@@ -87,26 +97,17 @@
  <Reference Include="Unity.Rider.Editor">
  <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
- <Reference Include="Unity.TextMeshPro">
- <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
- </Reference>
- <Reference Include="UnityEditor.UI">
- <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
- </Reference>
- <Reference Include="Cinemachine">
- <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
- </Reference>
- <Reference Include="Unity.OrganicaWild.Framework">
- <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/Unity.OrganicaWild.Framework.dll</HintPath>
- </Reference>
- <Reference Include="Unity.InputSystem">
- <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
- </Reference>
  <Reference Include="Unity.OrganicaWild.External">
  <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/Unity.OrganicaWild.External.dll</HintPath>
  </Reference>
  <Reference Include="com.unity.cinemachine.editor">
  <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.TextMeshPro">
+ <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+ </Reference>
+ <Reference Include="UnityEditor.UI">
+ <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Hub/Editor/2019.4.26f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>

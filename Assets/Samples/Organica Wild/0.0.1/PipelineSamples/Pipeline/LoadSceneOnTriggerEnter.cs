@@ -10,7 +10,7 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
             if (GameManager.foundAreas >= GameManager.uniqueAreasAmount)
             {
                 GameManager.CleanUpForNewGame();
-                SceneManager.LoadScene("StartScene");
+                SceneManager.LoadScene("IntermediaryScene");
             }
         }
     }

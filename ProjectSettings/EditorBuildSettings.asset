@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Samples/Organica Wild/0.0.1/PipelineSamples/Scenes/Silhouettes.unity
     guid: 666aceca17e304058a0c5fed3691b804
+  - enabled: 1
+    path: Assets/Samples/Organica Wild/0.0.1/PipelineSamples/IntermediaryScene.unity
+    guid: 5bff523d85a0a4c09ab5b939b36eebd3
   m_configObjects: {}
