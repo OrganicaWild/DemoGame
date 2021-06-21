@@ -967,8 +967,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   clearedLevelText: {fileID: 1991697764}
+  gameIsolationType: LongPaths
   pipelineManagerObject: {fileID: 6099828077066956232}
   progressCircleImage: {fileID: 1350723305}
+  standardPipelineManager: {fileID: 6099828077066956233}
 --- !u!4 &2089439227
 Transform:
   m_ObjectHideFlags: 0

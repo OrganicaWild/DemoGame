@@ -50,16 +50,17 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\AreaSizeCounter.cs" />
-     <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\LandmarkAreaStep.cs" />
-     <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\PairedAreaFlowerRingRecipe.cs" />
-     <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\PairedAreaSilhouetteRecipe.cs" />
-     <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\PathLengthCounter.cs" />
      <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\ActivateAllChildrenUponGameManagerStart.cs" />
+     <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\AreaSizeCounter.cs" />
      <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\ConnectedAreaTrigger.cs" />
+     <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\DataPack.cs" />
      <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\GameManager.cs" />
+     <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\LandmarkAreaStep.cs" />
      <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\LoadScene.cs" />
      <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\LoadSceneOnTriggerEnter.cs" />
+     <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\PairedAreaFlowerRingRecipe.cs" />
+     <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\PairedAreaSilhouetteRecipe.cs" />
+     <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\PathLengthCounter.cs" />
      <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\PlayerCharacter\CatMovement.cs" />
      <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\PlayerCharacter\PlayerInput.cs" />
      <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\PlayerCharacter\RotateByTime.cs" />

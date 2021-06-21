@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.UI;
 
-namespace Demo.Pipeline
+namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
 {
     public class ScoreUpdater : MonoBehaviour
     {
