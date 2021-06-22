@@ -1,14 +1,13 @@
 {
   "dependencies": {
     "ch.i4ds.organicawild": {
-      "version": "ssh://git@github.com/OrganicaWild/OrganicaWild.git",
+      "version": "file:OrganicaWild",
       "depth": 0,
-      "source": "git",
+      "source": "embedded",
       "dependencies": {
         "com.unity.inputsystem": "1.0.2",
         "com.unity.cinemachine": "2.6.4"
-      },
-      "hash": "4b53678189f0e8d4faa84ef22a620b45fac1fa95"
+      }
     },
     "com.unity.cinemachine": {
       "version": "2.6.4",
