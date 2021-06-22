@@ -18,7 +18,7 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
             GameManager.uniqueLevels = sceneNames.Length;
         }
 
-        private void NextScene()
+        public void NextScene()
         {
             if (order.Count == 0)
             {
@@ -45,5 +45,6 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
             GameManager.isFirst = true;
             NextScene();
         }
+        
     }
 }
