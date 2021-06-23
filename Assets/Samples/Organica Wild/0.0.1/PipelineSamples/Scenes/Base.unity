@@ -441,6 +441,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5055357411acb420a88cb6d5d8e696bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  field: {fileID: 0}
 --- !u!1 &6099828077066956232
 GameObject:
   m_ObjectHideFlags: 0
@@ -579,6 +580,8 @@ MonoBehaviour:
   connectionClosenessToVoronoiVertex: 0.5
   maxDimensions: {x: 99, y: 99}
   minDimensions: {x: 1, y: 1}
+  addSecondaryConnections: 0
+  secondaryPercentage: 0.412
 --- !u!114 &6099828077066956241
 MonoBehaviour:
   m_ObjectHideFlags: 0
