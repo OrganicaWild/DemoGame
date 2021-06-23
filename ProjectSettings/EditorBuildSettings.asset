@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Samples/Organica Wild/0.0.1/PipelineSamples/InformationScene.unity
     guid: cf1a733e148834077ac0d4e31a8e5e40
   - enabled: 1
-    path: Assets/Samples/Organica Wild/0.0.1/PipelineSamples/StartScene.unity
+    path: Assets/Samples/Organica Wild/0.0.1/PipelineSamples/Scenes/StartScene.unity
     guid: 8fbcf6d25b055de498822079ff9af023
   - enabled: 1
     path: Assets/Samples/Organica Wild/0.0.1/PipelineSamples/Scenes/Base.unity
@@ -32,4 +32,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Samples/Organica Wild/0.0.1/PipelineSamples/IntermediaryScene.unity
     guid: 5bff523d85a0a4c09ab5b939b36eebd3
-  m_configObjects: {}
+  m_configObjects:
+    com.unity.input.settings: {fileID: 11400000, guid: f8012bb0b9cb94fdab1dd506beb9736d,
+      type: 2}

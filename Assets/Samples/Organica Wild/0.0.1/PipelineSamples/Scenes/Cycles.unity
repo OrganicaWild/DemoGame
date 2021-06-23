@@ -700,7 +700,7 @@ MonoBehaviour:
     recipe: {fileID: 11400000, guid: 9e3689b0f72f042c9b3987ddac54f7d7, type: 2}
   layerDistance: {x: 0, y: 0.00001, z: 0}
   positionOfWorld: {x: 0, y: 0, z: 0}
-  manager: {fileID: 0}
+  manager: {fileID: 6099828077066956233}
   flipYAndZ: 1
 --- !u!114 &6099828077066956246
 MonoBehaviour:
@@ -726,7 +726,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c67d125fbfc24e7e97ddca23935b080c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isConnected: 0.699
+  isConnected: 0.3
 --- !u!114 &6099828077066956250
 MonoBehaviour:
   m_ObjectHideFlags: 0

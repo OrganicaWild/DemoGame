@@ -416,8 +416,31 @@ PrefabInstance:
       propertyPath: pipelineManagerObject
       value: 
       objectReference: {fileID: 6099828077066956232}
+    - target: {fileID: 6098585886063451957, guid: 8f3dc569f9e0b43a29ab200500e7da5c,
+        type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 25
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f3dc569f9e0b43a29ab200500e7da5c, type: 3}
+--- !u!1 &6098585886916149785 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5818016280825808195, guid: 8f3dc569f9e0b43a29ab200500e7da5c,
+    type: 3}
+  m_PrefabInstance: {fileID: 6098585886916149784}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6098585886916149786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6098585886916149785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5055357411acb420a88cb6d5d8e696bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6099828077066956232
 GameObject:
   m_ObjectHideFlags: 0
