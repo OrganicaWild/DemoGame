@@ -562,7 +562,7 @@ MonoBehaviour:
   maxDimensions: {x: 99, y: 99}
   minDimensions: {x: 1, y: 1}
   addSecondaryConnections: 0
-  secondaryPercentage: 1
+  secondaryPercentage: 0.45
 --- !u!114 &6099828077066956241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -576,7 +576,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   poissonDiskRadius: 3
-  samplesBeforeRejection: 3
+  samplesBeforeRejection: 30
 --- !u!114 &6099828077066956242
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -728,7 +728,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c67d125fbfc24e7e97ddca23935b080c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isConnected: 0.3
+  isConnected: 1
 --- !u!114 &6099828077066956250
 MonoBehaviour:
   m_ObjectHideFlags: 0
