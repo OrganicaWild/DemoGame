@@ -561,6 +561,8 @@ MonoBehaviour:
   connectionClosenessToVoronoiVertex: 0.5
   maxDimensions: {x: 99, y: 99}
   minDimensions: {x: 1, y: 1}
+  addSecondaryConnections: 0
+  secondaryPercentage: 1
 --- !u!114 &6099828077066956241
 MonoBehaviour:
   m_ObjectHideFlags: 0
