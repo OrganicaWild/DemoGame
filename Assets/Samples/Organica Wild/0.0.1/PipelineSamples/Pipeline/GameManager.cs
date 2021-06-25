@@ -57,7 +57,7 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
             if (gameHasStarted)
             {
                 Destroy(startCamera);
-                scoreText.text = $"{foundAreas} von {uniqueAreasAmount} einzigartigen Gebietsarten gefunden";
+                scoreText.text = $"{foundAreas}/{uniqueAreasAmount} \nOrtspaare gefunden/ location pairs found\n";
 
                 if (foundAreas == uniqueAreasAmount)
                 {
