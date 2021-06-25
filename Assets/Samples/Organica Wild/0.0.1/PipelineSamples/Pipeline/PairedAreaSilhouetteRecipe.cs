@@ -83,7 +83,7 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
             connectedAreaTrigger.secondsToWait = secondsToSpawn;
 
             int numberOfDefiningPrefabs = (int) (localRandom.NextDouble() * (maxPrefabs - 1) + 1);
-            Debug.Log(numberOfDefiningPrefabs);
+            
             if (numberOfDefiningPrefabs < 3)
             {
                 if (numberOfDefiningPrefabs == 1)
