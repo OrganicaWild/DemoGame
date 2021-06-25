@@ -130,7 +130,9 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline.PlayerCharacte
             if (MovementPressed && RunPressed && !isRunning) IsRunning = true;
             if (!(MovementPressed && RunPressed) && isRunning) IsRunning = false;
 
-            if ((isWalking || isRunning) && TimeSinceLatestSleep > timeToWakeUp)
+            if (animator.GetCurrentAnimatorStateInfo(0).IsName("Standing still")
+                || animator.GetCurrentAnimatorStateInfo(0).IsName("Walking forward")
+                || animator.GetCurrentAnimatorStateInfo(0).IsName("Running forward"))
             {
                 float currentAngle = transform.eulerAngles.y;
                 float targetAngle = GetTargetAngle();
@@ -145,6 +147,7 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline.PlayerCharacte
 
                 CurrentDirection = (CurrentDirection + CurrentInputToVector3 * acceleration * Time.deltaTime)
                     .normalized;
+
                 characterController.Move(CurrentDirection * speed * Time.deltaTime);
             }
             else
