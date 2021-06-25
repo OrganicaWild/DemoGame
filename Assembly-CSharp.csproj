@@ -64,7 +64,6 @@
      <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\PlayerCharacter\CatMovement.cs" />
      <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\PlayerCharacter\PlayerInput.cs" />
      <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\PlayerCharacter\RotateByTime.cs" />
-     <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\ScoreUpdater.cs" />
      <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\SendComment.cs" />
      <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\SlideManager.cs" />
      <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\WorldMSTMainPathStep.cs" />
