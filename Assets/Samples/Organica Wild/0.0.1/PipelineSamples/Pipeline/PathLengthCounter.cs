@@ -96,10 +96,38 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
                 }
             }
 
+            int cycles = CountCycles(world);
+
+            GameManager.analyitcsData.cyclesAmount = cycles;
             GameManager.analyitcsData.pathSum = sum;
             GameManager.analyitcsData.pathAverage = sum / i;
 
             return world;
+        }
+        
+        private int CountCycles(GameWorld world)
+        {
+            IEnumerable<OwLine> mainPathLines =
+                world.Root.GetChildrenInChildren().OfType<MainPath>().Select(path => (OwLine) path.Shape);
+            (int vertices, int edges) = GetGraphCharacteristics(mainPathLines);
+            int cycles = edges - vertices + 1;
+            Debug.Log($"<color=#00FFFF>{edges} edges detected!</color>");
+            Debug.Log($"<color=#00FFFF>{vertices} vertices detected!</color>");
+            Debug.Log($"<color=#00FFFF>{cycles} cycle(s) detected!</color>");
+
+            return cycles;
+        }
+
+        private (int vertices, int edges) GetGraphCharacteristics(IEnumerable<OwLine> mainPathLines)
+        {
+            HashSet<Vector2> vertices = new HashSet<Vector2>();
+            var pathLines = mainPathLines as OwLine[] ?? mainPathLines.ToArray();
+            foreach (var mainPathLine in pathLines)
+            {
+                vertices.Add(mainPathLine.Start);
+                vertices.Add(mainPathLine.End);
+            }
+            return (vertices.Count, pathLines.Count());
         }
     }
 }
