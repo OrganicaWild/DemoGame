@@ -27,6 +27,15 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline.PlayerCharacte
         private bool MovementPressed => CurrentInput.magnitude != 0f;
         private bool RunPressed { get; set; }
 
+        private bool Forward = false;
+        private bool Left = false;
+        private bool Backward = false;
+        private bool Right = false;
+        private bool Forward1 = false;
+        private bool Left1 = false;
+        private bool Backward1 = false;
+        private bool Right1 = false;
+        
         private float TimeSinceLatestMovement { get; set; } = 0f;
         private float TimeSinceLatestSleep { get; set; } = 100 + float.Epsilon;
 
@@ -49,28 +58,48 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline.PlayerCharacte
             input.CharacterControls.Forward.performed += ctx =>
             {
                 ResetTimeSinceLatestMovement();
-                CurrentInput += ctx.ReadValueAsButton() ? Vector2Int.up : Vector2Int.down;
+                Forward = ctx.ReadValueAsButton();
             };
             input.CharacterControls.Left.performed += ctx =>
             {
                 ResetTimeSinceLatestMovement();
-                CurrentInput += ctx.ReadValueAsButton() ? Vector2Int.left : Vector2Int.right;
+                Left = ctx.ReadValueAsButton();
             };
             input.CharacterControls.Backward.performed += ctx =>
             {
                 ResetTimeSinceLatestMovement();
-                CurrentInput += ctx.ReadValueAsButton() ? Vector2Int.down : Vector2Int.up;
+                Backward = ctx.ReadValueAsButton();
             };
             input.CharacterControls.Right.performed += ctx =>
             {
                 ResetTimeSinceLatestMovement();
-                CurrentInput += ctx.ReadValueAsButton() ? Vector2Int.right : Vector2Int.left;
+                Right = ctx.ReadValueAsButton();
             };
-
             input.CharacterControls.Run.performed += ctx =>
             {
                 ResetTimeSinceLatestMovement();
                 RunPressed = ctx.ReadValueAsButton();
+            };
+            
+            input.CharacterControls.Forward1.performed += ctx =>
+            {
+                ResetTimeSinceLatestMovement();
+                Forward1 = ctx.ReadValueAsButton();
+            };
+            input.CharacterControls.Left1.performed += ctx =>
+            {
+                ResetTimeSinceLatestMovement();
+                Left1 = ctx.ReadValueAsButton();
+            };
+            input.CharacterControls.Backward1.performed += ctx =>
+            {
+                ResetTimeSinceLatestMovement();
+                Backward1 = ctx.ReadValueAsButton();
+            };
+            input.CharacterControls.Right1.performed += ctx =>
+            {
+                ResetTimeSinceLatestMovement();
+                Right1 = ctx.ReadValueAsButton();
             };
         }
 
@@ -85,6 +114,7 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline.PlayerCharacte
         {
             if (GameManager.gameHasStarted)
             {
+                SetCurrentInput();
                 HandleSleep();
                 HandleMovement();
 
@@ -97,6 +127,15 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline.PlayerCharacte
                     GameManager.analyitcsData.timeWalking += Time.deltaTime;
                 }
             }
+        }
+
+        private void SetCurrentInput()
+        {
+            CurrentInput = Vector2Int.zero;
+            if (Forward || Forward1) CurrentInput += Vector2Int.up;
+            if (Left || Left1) CurrentInput += Vector2Int.left;
+            if (Backward || Backward1) CurrentInput += Vector2Int.down;
+            if (Right || Right1) CurrentInput += Vector2Int.right;
         }
 
         private void HandleSleep()
