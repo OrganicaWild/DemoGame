@@ -10,74 +10,63 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
     public class ConnectedAreaTrigger : MonoBehaviour
     {
         public int partOfGroupX;
-        public static Dictionary<int, bool> groupsActivated = new Dictionary<int, bool>();
-
         public GameObject toSpawn;
         public Vector3 spawnPoint;
         public float secondsToWait;
-        private float timeSinceActivated;
-        private bool spawnedThing;
         public Image progressCircleImage;
 
-        private void Start()
+        private float timeWaiting;
+        private bool activated;
+        private bool standingInside;
+        
+        private void OnTriggerEnter(Collider other)
         {
-            if (!groupsActivated.ContainsKey(partOfGroupX))
-            {
-                groupsActivated.Add(partOfGroupX, false);
-            }
-            
+            standingInside = true;
         }
 
         private void OnTriggerStay(Collider other)
         {
-            var fillPercent = timeSinceActivated / secondsToWait;
-
-            progressCircleImage.fillAmount = fillPercent;
-            timeSinceActivated += Time.deltaTime;
-
-            if (timeSinceActivated > secondsToWait)
+            if (activated)
             {
-                if (!groupsActivated[partOfGroupX])
+                progressCircleImage.fillAmount = 1;
+                return; 
+            }
+            
+            float fillPercent = timeWaiting / secondsToWait;
+            progressCircleImage.fillAmount = fillPercent;
+            timeWaiting += Time.deltaTime;
+            
+            //found
+            if (timeWaiting > secondsToWait)
+            {
+                if (!GameManager.activatedGroups[partOfGroupX])
                 {
-                    progressCircleImage.fillAmount = 0;
-                    groupsActivated[partOfGroupX] = true;
+                    progressCircleImage.fillAmount = fillPercent;
+                    GameManager.activatedGroups[partOfGroupX] = true;
                     Instantiate(toSpawn, spawnPoint, Quaternion.identity);
-                    spawnedThing = true;
+                    activated = true;
                     GameManager.foundAreas++;
                 }
-                else if (spawnedThing != true)
+                else
                 {
-                    Debug.Log("failed Activate");
-                    GameManager.analyitcsData.failedActivations++;
-                    spawnedThing = true;
+                    //false activation
+                    if (!activated && standingInside)
+                    {
+                        Debug.Log($"failed activation of {partOfGroupX}");
+                        GameManager.analyitcsData.failedActivations++;
+                        standingInside = false;
+                    }
                 }
             }
         }
 
         private void OnTriggerExit(Collider other)
         {
+            standingInside = false;
+            timeWaiting = 0;
             progressCircleImage.fillAmount = 0;
-            if (timeSinceActivated < secondsToWait)
-            {
-                groupsActivated[partOfGroupX] = false;
-                timeSinceActivated = 0;
-            }
         }
-
-        private void OnDestroy()
-        {
-        }
-
-        public void SetImage(Image image)
-        {
-            progressCircleImage = image;
-        }
-
-        public static void SetAllToFalse()
-        {
-            groupsActivated.Clear();
-        }
-
+        
         private void OnDrawGizmos()
         {
             Gizmos.color = new Color(1f, 0, 0, .5f);
