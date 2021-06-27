@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
@@ -24,6 +25,7 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
             {
                 groupsActivated.Add(partOfGroupX, false);
             }
+            
         }
 
         private void OnTriggerStay(Collider other)
@@ -60,6 +62,10 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
                 groupsActivated[partOfGroupX] = false;
                 timeSinceActivated = 0;
             }
+        }
+
+        private void OnDestroy()
+        {
         }
 
         public void SetImage(Image image)

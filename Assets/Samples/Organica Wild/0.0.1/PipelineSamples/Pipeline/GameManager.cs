@@ -84,8 +84,18 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
 
             StandardPipelineManager manager = pipelineManagerObject.GetComponent<StandardPipelineManager>();
             ConnectedAreaTrigger.SetAllToFalse();
-            manager.Seed = Environment.TickCount;
-            analyitcsData.seed = manager.Seed;
+           
+           
+            if (manager.Seed == 0)
+            {
+                manager.Seed = Environment.TickCount;
+                analyitcsData.seed = manager.Seed;
+            }
+            else
+            {
+                analyitcsData.seed = manager.Seed;
+            }
+            
             manager.Setup();
             yield return StartCoroutine(manager.Generate());
 
