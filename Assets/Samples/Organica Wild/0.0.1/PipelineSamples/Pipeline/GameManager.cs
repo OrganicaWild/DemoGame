@@ -26,6 +26,7 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
         public static DataPack analyitcsData { get; private set; }
         public static HashSet<Color> landMarkAreaColors;
         public static HashSet<string> landMarkAreaSilhouettes;
+        public static bool[] activatedGroups;
         public static int casual;
         
         public GameObject scoreboardText;
@@ -50,6 +51,7 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
             }
             
             StartCoroutine(nameof(StartNewGame));
+           
         }
 
         private void Update()
@@ -83,9 +85,7 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
             landMarkAreaSilhouettes = new HashSet<string>();
 
             StandardPipelineManager manager = pipelineManagerObject.GetComponent<StandardPipelineManager>();
-            ConnectedAreaTrigger.SetAllToFalse();
-           
-           
+
             if (manager.Seed == 0)
             {
                 manager.Seed = Environment.TickCount;
@@ -108,6 +108,7 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
 
             readyToPlay = true;
             foundAreas = 0;
+            activatedGroups = new bool[uniqueAreasAmount];
         }
 
         public static void CleanUpForNewGame()
