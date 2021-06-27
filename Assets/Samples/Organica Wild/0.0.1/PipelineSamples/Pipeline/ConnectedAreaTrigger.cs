@@ -29,7 +29,7 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
             if (activated)
             {
                 progressCircleImage.fillAmount = 1;
-                return; 
+                return;
             }
             
             float fillPercent = timeWaiting / secondsToWait;
