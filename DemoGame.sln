@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 11.00
 # Visual Studio 2010
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.OrganicaWild.External", "Unity.OrganicaWild.External.csproj", "{42bc60ef-f678-52d0-495e-f751abd78bda}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{f64ce33a-2f60-b2de-6d8e-3f81c9717b56}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.OrganicaWild.Framework", "Unity.OrganicaWild.Framework.csproj", "{a7dc3000-7ca6-f617-ca53-cb5504bea4ea}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Assembly-CSharp", "Assembly-CSharp.csproj", "{f64ce33a-2f60-b2de-6d8e-3f81c9717b56}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Unity.OrganicaWild.Editor", "Unity.OrganicaWild.Editor.csproj", "{a8515d5a-7f5b-01f0-fca3-c1844cf31169}"
 EndProject
@@ -19,14 +19,14 @@ Global
 		{42bc60ef-f678-52d0-495e-f751abd78bda}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{42bc60ef-f678-52d0-495e-f751abd78bda}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{42bc60ef-f678-52d0-495e-f751abd78bda}.Release|Any CPU.Build.0 = Release|Any CPU
-		{f64ce33a-2f60-b2de-6d8e-3f81c9717b56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{f64ce33a-2f60-b2de-6d8e-3f81c9717b56}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{f64ce33a-2f60-b2de-6d8e-3f81c9717b56}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{f64ce33a-2f60-b2de-6d8e-3f81c9717b56}.Release|Any CPU.Build.0 = Release|Any CPU
 		{a7dc3000-7ca6-f617-ca53-cb5504bea4ea}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{a7dc3000-7ca6-f617-ca53-cb5504bea4ea}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{a7dc3000-7ca6-f617-ca53-cb5504bea4ea}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{a7dc3000-7ca6-f617-ca53-cb5504bea4ea}.Release|Any CPU.Build.0 = Release|Any CPU
+		{f64ce33a-2f60-b2de-6d8e-3f81c9717b56}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{f64ce33a-2f60-b2de-6d8e-3f81c9717b56}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{f64ce33a-2f60-b2de-6d8e-3f81c9717b56}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{f64ce33a-2f60-b2de-6d8e-3f81c9717b56}.Release|Any CPU.Build.0 = Release|Any CPU
 		{a8515d5a-7f5b-01f0-fca3-c1844cf31169}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{a8515d5a-7f5b-01f0-fca3-c1844cf31169}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{a8515d5a-7f5b-01f0-fca3-c1844cf31169}.Release|Any CPU.ActiveCfg = Release|Any CPU
