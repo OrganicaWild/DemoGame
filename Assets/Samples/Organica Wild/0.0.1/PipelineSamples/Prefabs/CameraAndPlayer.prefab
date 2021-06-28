@@ -810,8 +810,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   characterController: {fileID: 3875207981607201629}
-  defaultWalkingSpeed: 3
-  defaultRunningSpeed: 6
+  defaultWalkingSpeed: 4
+  defaultRunningSpeed: 7
   turnSmoothTime: 0.3
   acceleration: 3
   timeUntilSleep: 3
