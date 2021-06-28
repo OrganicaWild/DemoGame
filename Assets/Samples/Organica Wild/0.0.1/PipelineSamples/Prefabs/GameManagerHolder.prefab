@@ -77,7 +77,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Enter text...
+  m_Text: Text eingeben... / Enter text...
 --- !u!1 &668046289451909651
 GameObject:
   m_ObjectHideFlags: 0
@@ -717,7 +717,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: "0/X \nOrtspaare gefunden/ location pairs found\n"
+  m_Text: "0/X \nOrtspaare gefunden / location pairs found\n"
 --- !u!1 &6098585885761120295
 GameObject:
   m_ObjectHideFlags: 0
@@ -949,7 +949,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'any comments about the level? '
+  m_Text: 'Do you have any comments about the level? '
 --- !u!1 &6098585885986348034
 GameObject:
   m_ObjectHideFlags: 0
@@ -1361,7 +1361,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "lade n\xE4chstes Level... /loading next level..."
+  m_Text: "lade n\xE4chstes Level... / loading next level..."
 --- !u!1 &6098585886102611199
 GameObject:
   m_ObjectHideFlags: 0
@@ -1513,7 +1513,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Kommentare \xFCber das Level?"
+  m_Text: "Hast du Kommentare \xFCber das Level?"
 --- !u!1 &6098585886485932469
 GameObject:
   m_ObjectHideFlags: 0
@@ -1591,7 +1591,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 0/5 levels
+  m_Text: 0/5 Levels
 --- !u!1 &6098585886494215191
 GameObject:
   m_ObjectHideFlags: 0
