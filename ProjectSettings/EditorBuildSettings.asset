@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Samples/Organica Wild/0.0.1/PipelineSamples/InformationScene.unity
+    path: Assets/Samples/Organica Wild/0.0.1/PipelineSamples/Scenes/InformationScene.unity
     guid: cf1a733e148834077ac0d4e31a8e5e40
   - enabled: 1
     path: Assets/Samples/Organica Wild/0.0.1/PipelineSamples/Scenes/StartScene.unity
@@ -30,7 +30,7 @@ EditorBuildSettings:
     path: Assets/Samples/Organica Wild/0.0.1/PipelineSamples/Scenes/Silhouettes.unity
     guid: 666aceca17e304058a0c5fed3691b804
   - enabled: 1
-    path: Assets/Samples/Organica Wild/0.0.1/PipelineSamples/IntermediaryScene.unity
+    path: Assets/Samples/Organica Wild/0.0.1/PipelineSamples/Scenes/IntermediaryScene.unity
     guid: 5bff523d85a0a4c09ab5b939b36eebd3
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: f8012bb0b9cb94fdab1dd506beb9736d,
