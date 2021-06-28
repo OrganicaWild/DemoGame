@@ -244,6 +244,21 @@ PrefabInstance:
       propertyPath: pipelineManagerObject
       value: 
       objectReference: {fileID: 6099828077066956232}
+    - target: {fileID: 6098585885986348037, guid: 8f3dc569f9e0b43a29ab200500e7da5c,
+        type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6098585886063451956, guid: 8f3dc569f9e0b43a29ab200500e7da5c,
+        type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6098585886815908098, guid: 8f3dc569f9e0b43a29ab200500e7da5c,
+        type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8f3dc569f9e0b43a29ab200500e7da5c, type: 3}
 --- !u!1 &1593575416

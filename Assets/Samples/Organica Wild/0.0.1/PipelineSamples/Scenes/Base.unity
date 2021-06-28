@@ -436,6 +436,16 @@ PrefabInstance:
       propertyPath: m_Color.a
       value: 0.5372549
       objectReference: {fileID: 0}
+    - target: {fileID: 6098585885986348037, guid: 8f3dc569f9e0b43a29ab200500e7da5c,
+        type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6098585886063451956, guid: 8f3dc569f9e0b43a29ab200500e7da5c,
+        type: 3}
+      propertyPath: m_ScreenMatchMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6098585886063451957, guid: 8f3dc569f9e0b43a29ab200500e7da5c,
         type: 3}
       propertyPath: m_AdditionalShaderChannelsFlag
