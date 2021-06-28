@@ -185,7 +185,7 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline.PlayerCharacte
                 if (isWalking) speed = defaultWalkingSpeed;
                 if (isRunning) speed = defaultRunningSpeed;
 
-                CurrentDirection = (CurrentDirection * 0.2f + CurrentInputToVector3 * acceleration * Time.deltaTime)
+                CurrentDirection = (CurrentDirection * 0.05f + CurrentInputToVector3 * acceleration * Time.deltaTime)
                     .normalized;
 
                 characterController.Move(CurrentDirection * speed * Time.deltaTime);
