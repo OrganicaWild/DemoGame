@@ -22,13 +22,13 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
         public static bool gameHasStarted;
         private bool readyToPlay;
         public static int uniqueLevels;
-        
+
         public static DataPack analyitcsData { get; private set; }
         public static HashSet<Color> landMarkAreaColors;
         public static HashSet<string> landMarkAreaSilhouettes;
         public static bool[] activatedGroups;
         public static int casual;
-        
+
         public GameObject scoreboardText;
         public Text scoreText;
         public GameObject startBoard;
@@ -38,20 +38,19 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
         public GameObject loadingText;
         public Text progression;
         public static bool isFirst;
-        
+
         private void Start()
         {
             progression.text = $"{uniqueLevels - IntermediarySceneManager.order.Count}/{uniqueLevels}";
             startBoard.SetActive(true);
-            
+
             if (isFirst)
             {
                 commentInput.SetActive(false);
                 isFirst = false;
             }
-            
+
             StartCoroutine(nameof(StartNewGame));
-           
         }
 
         private void Update()
@@ -68,7 +67,7 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
 
                 analyitcsData.timeAll += Time.deltaTime;
             }
-            else if(readyToPlay)
+            else if (readyToPlay)
             {
                 loadingText.SetActive(false);
                 goButton.SetActive(true);
@@ -95,9 +94,22 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
             {
                 analyitcsData.seed = manager.Seed;
             }
-            
-            manager.Setup();
-            yield return StartCoroutine(manager.Generate());
+
+            do
+            {
+                manager.Setup();
+                yield return StartCoroutine(manager.Generate());
+                
+                //if no error --> continue, else set new seed and try again
+                if (!StandardPipelineRunner.EncounteredError) continue;
+                
+                manager.Seed = Environment.TickCount;
+                analyitcsData.seed = manager.Seed;
+                
+            } while (StandardPipelineRunner.EncounteredError);
+
+           
+          
 
             //assign progress canvas/image to every trigger
             ConnectedAreaTrigger[] triggers = pipelineManagerObject.GetComponentsInChildren<ConnectedAreaTrigger>();
@@ -109,6 +121,8 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
             readyToPlay = true;
             foundAreas = 0;
             activatedGroups = new bool[uniqueAreasAmount];
+
+            yield return null;
         }
 
         public static void CleanUpForNewGame()
@@ -142,7 +156,6 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
             gameHasStarted = true;
             startBoard.SetActive(false);
             scoreboardText.SetActive(true);
-            
         }
     }
 }
