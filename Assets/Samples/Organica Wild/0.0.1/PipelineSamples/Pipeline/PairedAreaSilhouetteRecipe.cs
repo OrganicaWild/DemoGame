@@ -86,20 +86,20 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
             
             if (numberOfDefiningPrefabs < 3)
             {
+                Vector2 randomVector = Vector2Extensions.GetRandomNormalizedVector(localRandom);
+                randomVector *= radius;
+                
                 if (numberOfDefiningPrefabs == 1)
                 {
                     GameObject prefab =
                         silhouetteDefiningPrefabs[
                             (int) (localRandom.NextDouble() * (silhouetteDefiningPrefabs.Length - 1))];
-                    GameObject instantiated = GameObjectCreation.InstantiatePrefab(prefab, polygon.GetCentroid());
+                    GameObject instantiated = GameObjectCreation.InstantiatePrefab(prefab, polygon.GetCentroid() + randomVector);
                     instantiated.transform.parent = mesh.transform;
                 }
                 else
                 {
                     //maxPrefabs = 2
-                    Vector2 randomVector = Vector2Extensions.GetRandomNormalizedVector(localRandom);
-                    randomVector *= radius;
-
                     GameObject prefab =
                         silhouetteDefiningPrefabs[
                             (int) (localRandom.NextDouble() * (silhouetteDefiningPrefabs.Length - 1))];
