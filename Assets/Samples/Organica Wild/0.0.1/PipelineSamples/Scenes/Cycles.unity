@@ -563,7 +563,7 @@ MonoBehaviour:
   maxDimensions: {x: 99, y: 99}
   minDimensions: {x: 1, y: 1}
   addSecondaryConnections: 1
-  secondaryPercentage: 0.85
+  secondaryPercentage: 0.1
 --- !u!114 &6099828077066956241
 MonoBehaviour:
   m_ObjectHideFlags: 0
