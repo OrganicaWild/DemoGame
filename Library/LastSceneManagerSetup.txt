@@ -1,5 +1,0 @@
-sceneSetups:
-- path: Assets/Samples/Organica Wild/0.0.1/PipelineSamples/StartScene.unity
-  isLoaded: 1
-  isActive: 1
-  isSubScene: 0

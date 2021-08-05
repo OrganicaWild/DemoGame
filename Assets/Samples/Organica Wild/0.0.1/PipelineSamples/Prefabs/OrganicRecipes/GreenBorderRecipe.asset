@@ -22,3 +22,4 @@ MonoBehaviour:
   backgroundFloorMaterial: {fileID: 2100000, guid: f38db9239139a7a49ab69fa8542cf512,
     type: 2}
   prefabRadius: 2
+  borderWidth: 0.5

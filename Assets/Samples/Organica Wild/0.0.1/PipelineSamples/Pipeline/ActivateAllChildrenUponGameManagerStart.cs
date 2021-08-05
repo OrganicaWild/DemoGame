@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline;
+using UnityEngine;
 
 namespace Demo.Pipeline
 {
@@ -7,7 +8,7 @@ namespace Demo.Pipeline
         // Update is called once per frame
         void Update()
         {
-            if (GameManager._GameHasStarted)
+            if (GameManager.gameHasStarted)
             {
                 foreach (Transform child in transform)
                 {

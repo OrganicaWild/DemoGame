@@ -1,13 +1,17 @@
-﻿using Demo.Pipeline;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LoadSceneOnTriggerEnter : MonoBehaviour
+namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
 {
-    private void OnTriggerEnter(Collider other)
+    public class LoadSceneOnTriggerEnter : MonoBehaviour
     {
-        GameManager.foundAreas = 0;
-        GameManager.uniqueAreasAmount = 0;
-        SceneManager.LoadScene("StartScene");
+        private void OnTriggerEnter(Collider other)
+        {
+            if (GameManager.foundAreas >= GameManager.uniqueAreasAmount)
+            {
+                GameManager.CleanUpForNewGame();
+                SceneManager.LoadScene("IntermediaryScene");
+            }
+        }
     }
 }

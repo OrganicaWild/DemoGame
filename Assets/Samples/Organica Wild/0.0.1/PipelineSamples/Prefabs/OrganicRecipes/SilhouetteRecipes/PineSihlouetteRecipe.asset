@@ -18,7 +18,7 @@ MonoBehaviour:
   - {fileID: 198980, guid: 55ca4401075700d46a23ae8179a79579, type: 3}
   - {fileID: 104588, guid: 702740a5e4ac1ee40a1888d3b62faa91, type: 3}
   - {fileID: 152404, guid: 5037d6ea184d2f640bf78dcf9894a269, type: 3}
-  maxPrefabs: 1
+  maxPrefabs: 3
   radius: 2
   flowerPrefabs:
   - {fileID: 6211347479168399912, guid: 410253f020525ea49a25f8da652f4ff5, type: 3}

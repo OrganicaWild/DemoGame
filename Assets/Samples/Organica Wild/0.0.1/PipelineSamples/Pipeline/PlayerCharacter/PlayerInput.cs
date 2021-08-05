@@ -57,6 +57,38 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """"
+                },
+                {
+                    ""name"": ""Forward1"",
+                    ""type"": ""Button"",
+                    ""id"": ""6f679262-8828-425d-8af8-9b096cee76ec"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Left1"",
+                    ""type"": ""Button"",
+                    ""id"": ""66272980-f3be-4dbe-b325-dced6a05bc59"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Backward1"",
+                    ""type"": ""Button"",
+                    ""id"": ""3ec1db16-cfd4-48d8-af12-ad2b41dcb9ea"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
+                },
+                {
+                    ""name"": ""Right1"",
+                    ""type"": ""Button"",
+                    ""id"": ""58d3829f-7e7d-4ade-ad79-94c3cb9850c9"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """"
                 }
             ],
             ""bindings"": [
@@ -106,6 +138,17 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
+                    ""id"": ""8bfde31e-9064-4089-aea2-b2ab85810475"",
+                    ""path"": ""<Keyboard>/ctrl"",
+                    ""interactions"": ""Press(behavior=2)"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Run"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
                     ""id"": ""ea7b7245-14bb-42e1-8429-e3fb5ee50645"",
                     ""path"": ""<Keyboard>/shift"",
                     ""interactions"": ""Press(behavior=2)"",
@@ -117,12 +160,56 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 },
                 {
                     ""name"": """",
-                    ""id"": ""8bfde31e-9064-4089-aea2-b2ab85810475"",
-                    ""path"": ""<Keyboard>/ctrl"",
+                    ""id"": ""e1dc6205-299c-42d4-b76c-44985303598a"",
+                    ""path"": ""<Keyboard>/rightShift"",
                     ""interactions"": ""Press(behavior=2)"",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Run"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5371c3b9-81a4-489e-ab94-d6caf7fdf48e"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": ""Press(behavior=2)"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Forward1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""dc4bf2f5-ab9f-4c45-b30f-bf1294ef5208"",
+                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""interactions"": ""Press(behavior=2)"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Left1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""42315c53-4f24-470c-9a08-87f8d94784d4"",
+                    ""path"": ""<Keyboard>/upArrow"",
+                    ""interactions"": ""Press(behavior=2)"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Backward1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""9bb25bf2-be48-4d97-9b4d-b28f482eb9a3"",
+                    ""path"": ""<Keyboard>/leftArrow"",
+                    ""interactions"": ""Press(behavior=2)"",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Right1"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -165,6 +252,10 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         m_CharacterControls_Backward = m_CharacterControls.FindAction("Backward", throwIfNotFound: true);
         m_CharacterControls_Right = m_CharacterControls.FindAction("Right", throwIfNotFound: true);
         m_CharacterControls_Run = m_CharacterControls.FindAction("Run", throwIfNotFound: true);
+        m_CharacterControls_Forward1 = m_CharacterControls.FindAction("Forward1", throwIfNotFound: true);
+        m_CharacterControls_Left1 = m_CharacterControls.FindAction("Left1", throwIfNotFound: true);
+        m_CharacterControls_Backward1 = m_CharacterControls.FindAction("Backward1", throwIfNotFound: true);
+        m_CharacterControls_Right1 = m_CharacterControls.FindAction("Right1", throwIfNotFound: true);
         // CameraControls
         m_CameraControls = asset.FindActionMap("CameraControls", throwIfNotFound: true);
         m_CameraControls_Mouse = m_CameraControls.FindAction("Mouse", throwIfNotFound: true);
@@ -222,6 +313,10 @@ public class @PlayerInput : IInputActionCollection, IDisposable
     private readonly InputAction m_CharacterControls_Backward;
     private readonly InputAction m_CharacterControls_Right;
     private readonly InputAction m_CharacterControls_Run;
+    private readonly InputAction m_CharacterControls_Forward1;
+    private readonly InputAction m_CharacterControls_Left1;
+    private readonly InputAction m_CharacterControls_Backward1;
+    private readonly InputAction m_CharacterControls_Right1;
     public struct CharacterControlsActions
     {
         private @PlayerInput m_Wrapper;
@@ -231,6 +326,10 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         public InputAction @Backward => m_Wrapper.m_CharacterControls_Backward;
         public InputAction @Right => m_Wrapper.m_CharacterControls_Right;
         public InputAction @Run => m_Wrapper.m_CharacterControls_Run;
+        public InputAction @Forward1 => m_Wrapper.m_CharacterControls_Forward1;
+        public InputAction @Left1 => m_Wrapper.m_CharacterControls_Left1;
+        public InputAction @Backward1 => m_Wrapper.m_CharacterControls_Backward1;
+        public InputAction @Right1 => m_Wrapper.m_CharacterControls_Right1;
         public InputActionMap Get() { return m_Wrapper.m_CharacterControls; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -255,6 +354,18 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 @Run.started -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnRun;
                 @Run.performed -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnRun;
                 @Run.canceled -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnRun;
+                @Forward1.started -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnForward1;
+                @Forward1.performed -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnForward1;
+                @Forward1.canceled -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnForward1;
+                @Left1.started -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnLeft1;
+                @Left1.performed -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnLeft1;
+                @Left1.canceled -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnLeft1;
+                @Backward1.started -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnBackward1;
+                @Backward1.performed -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnBackward1;
+                @Backward1.canceled -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnBackward1;
+                @Right1.started -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnRight1;
+                @Right1.performed -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnRight1;
+                @Right1.canceled -= m_Wrapper.m_CharacterControlsActionsCallbackInterface.OnRight1;
             }
             m_Wrapper.m_CharacterControlsActionsCallbackInterface = instance;
             if (instance != null)
@@ -274,6 +385,18 @@ public class @PlayerInput : IInputActionCollection, IDisposable
                 @Run.started += instance.OnRun;
                 @Run.performed += instance.OnRun;
                 @Run.canceled += instance.OnRun;
+                @Forward1.started += instance.OnForward1;
+                @Forward1.performed += instance.OnForward1;
+                @Forward1.canceled += instance.OnForward1;
+                @Left1.started += instance.OnLeft1;
+                @Left1.performed += instance.OnLeft1;
+                @Left1.canceled += instance.OnLeft1;
+                @Backward1.started += instance.OnBackward1;
+                @Backward1.performed += instance.OnBackward1;
+                @Backward1.canceled += instance.OnBackward1;
+                @Right1.started += instance.OnRight1;
+                @Right1.performed += instance.OnRight1;
+                @Right1.canceled += instance.OnRight1;
             }
         }
     }
@@ -318,6 +441,10 @@ public class @PlayerInput : IInputActionCollection, IDisposable
         void OnBackward(InputAction.CallbackContext context);
         void OnRight(InputAction.CallbackContext context);
         void OnRun(InputAction.CallbackContext context);
+        void OnForward1(InputAction.CallbackContext context);
+        void OnLeft1(InputAction.CallbackContext context);
+        void OnBackward1(InputAction.CallbackContext context);
+        void OnRight1(InputAction.CallbackContext context);
     }
     public interface ICameraControlsActions
     {
