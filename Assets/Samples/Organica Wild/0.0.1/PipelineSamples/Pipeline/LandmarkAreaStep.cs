@@ -34,10 +34,10 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
         {
             Epsilon.Eps = epsilon;
 
-            IEnumerable<AreaTypeAssignmentStep.TypedArea> areas =
-                world.Root.GetAllChildrenOfType<AreaTypeAssignmentStep.TypedArea>();
+            IEnumerable<Area> areas =
+                world.Root.GetAllChildrenOfType<Area>();
 
-            List<AreaTypeAssignmentStep.TypedArea> areasWithLandmarks =
+            List<Area> areasWithLandmarks =
                 areas.Where(area => area.HasAnyChildrenOfType<Landmark>() && area.Type != "start" && area.Type != "end")
                     .ToList();
             int areasWithLandmarksSum = (int) (areasWithLandmarks.Count() * landMarkIsAreaPercentage);
@@ -49,7 +49,7 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
             for (int pair = 0; pair < pairs; pair++)
             {
                 //create unique Landmark
-                AreaTypeAssignmentStep.TypedArea[] chosenAreas = GetConnectedChosenAreas(areasWithLandmarks);
+                Area[] chosenAreas = GetConnectedChosenAreas(areasWithLandmarks);
                 Landmark[] chosenLandmarks = new Landmark[areaXTimes];
                 OwPolygon[] movedCircle = new OwPolygon[areaXTimes];
 
@@ -74,7 +74,7 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
                     Landmark chosenLandmarkI = chosenLandmarks[index];
                     OwPolygon movedCircleI = movedCircle[index];
                     chosenLandmarkI.Shape = movedCircleI;
-                    chosenLandmarkI.Type = $"landmarkPair{pair}";
+                    chosenLandmarkI.Type = $"landmarkPair{pair+2}";
                     areasWithLandmarks.Remove(chosenAreas[index]);
 
                     List<Landmark> allLandmarksInArea = chosenAreas[index].GetAllChildrenOfType<Landmark>().ToList();
@@ -96,8 +96,8 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
             return world;
         }
 
-        private AreaTypeAssignmentStep.TypedArea[] GetConnectedChosenAreas(
-            List<AreaTypeAssignmentStep.TypedArea> areasWithLandmarks)
+        private Area[] GetConnectedChosenAreas(
+            List<Area> areasWithLandmarks)
         {
             int[] areaIndices = new int[areaXTimes];
 
@@ -119,7 +119,7 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
                 } while (areaIndices.Distinct().Count() != areaIndices.Length);
             }
 
-            AreaTypeAssignmentStep.TypedArea[] chosenAreas = new AreaTypeAssignmentStep.TypedArea[areaXTimes];
+            Area[] chosenAreas = new Area[areaXTimes];
             for (int i = 0; i < areaXTimes; i++)
             {
                 chosenAreas[i] = areasWithLandmarks[areaIndices[i]];
@@ -128,7 +128,7 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
             return chosenAreas;
         }
 
-        private OwPolygon GetUniqueShape(AreaTypeAssignmentStep.TypedArea[] chosenAreas, Landmark[] chosenLandmarks)
+        private OwPolygon GetUniqueShape(Area[] chosenAreas, Landmark[] chosenLandmarks)
         {
             IEnumerable<Vector2> points = PoissonDiskSampling.GeneratePoints(radiusP, sizeP, sizeP, rejectionP, random);
             OwPolygon baseCircle = new OwCircle(Vector2.zero, 1f, circleResolution);
