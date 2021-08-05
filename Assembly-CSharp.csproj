@@ -66,6 +66,7 @@
      <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\PlayerCharacter\RotateByTime.cs" />
      <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\SendComment.cs" />
      <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\SlideManager.cs" />
+     <Compile Include="Assets\Visualization\SimpleAreaStep.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
