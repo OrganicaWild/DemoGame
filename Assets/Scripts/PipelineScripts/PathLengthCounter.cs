@@ -48,9 +48,9 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
                     Area target = areaConnection.Target;
                     int targetIndex = areas.IndexOf(target);
                     float distanceToConnection =
-                        (areaConnection.Shape.GetCentroid() - area.Shape.GetCentroid()).magnitude;
+                        (areaConnection.GetShape().GetCentroid() - area.GetShape().GetCentroid()).magnitude;
                     float distanceFromConnection =
-                        (areaConnection.Shape.GetCentroid() - target.Shape.GetCentroid()).magnitude;
+                        (areaConnection.GetShape().GetCentroid() - target.GetShape().GetCentroid()).magnitude;
                     float distance = distanceFromConnection + distanceToConnection;
                     adjMatrix[index, targetIndex] = (int) Math.Floor(distance);
                     adjMatrix[targetIndex, index] = (int) Math.Floor(distance);
@@ -60,7 +60,7 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
             int[,] distances = FloydWarshall.Execute(adjMatrix, verticesCount);
 
             IEnumerable<int> allWithAreaLandmarkIndexes = areas
-                .Where(area => area.GetAllChildrenOfType<Landmark>().Any(landmark => landmark.Shape is OwPolygon))
+                .Where(area => area.GetAllChildrenOfType<Landmark>().Any(landmark => landmark.GetShape() is OwPolygon))
                 .Select(area => areas.IndexOf(area));
             
             int sumOfDistances = 0;
@@ -90,7 +90,7 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
             {
                 if (child is MainPath)
                 {
-                    float length = ((OwLine) child.Shape).Length();
+                    float length = ((OwLine) child.GetShape()).Length();
                     sum += length;
                     i++;
                 }
@@ -108,7 +108,7 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
         private int CountCycles(GameWorld world)
         {
             IEnumerable<OwLine> mainPathLines =
-                world.Root.GetChildrenInChildren().OfType<MainPath>().Select(path => (OwLine) path.Shape);
+                world.Root.GetChildrenInChildren().OfType<MainPath>().Select(path => (OwLine) path.GetShape());
             (int vertices, int edges) = GetGraphCharacteristics(mainPathLines);
             int cycles = edges - vertices + 1;
             Debug.Log($"<color=#00FFFF>{edges} edges detected!</color>");

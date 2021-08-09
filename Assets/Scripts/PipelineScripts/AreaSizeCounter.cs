@@ -19,7 +19,7 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
         {
             var childrenInChildren = world.Root.GetChildren();
             var areas = childrenInChildren.Where(x =>
-                x.GetType() == typeof(Area) || x.GetType() == typeof(AreaTypeAssignmentStep.TypedArea)).ToList();
+                x.GetType() == typeof(Area) || x.GetType() == typeof(Area)).ToList();
 
             double sum = 0.0;
             Dictionary<string, object> eventValues = new Dictionary<string, object>();
@@ -27,7 +27,7 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
             int index = 0;
             foreach (Area area in areas)
             {
-                OwPolygon shapePolygon = area.Shape as OwPolygon;
+                OwPolygon shapePolygon = area.GetShape();
                 List<GeneralPolygon2d> polygons = shapePolygon.Getg3Polygon();
                 foreach (GeneralPolygon2d generalPolygon2d in polygons)
                 {
