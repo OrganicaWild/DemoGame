@@ -50,6 +50,7 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
+     <Compile Include="Assets\Samples\CameraCapture.cs" />
      <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\ActivateAllChildrenUponGameManagerStart.cs" />
      <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\AreaSizeCounter.cs" />
      <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\ConnectedAreaTrigger.cs" />
