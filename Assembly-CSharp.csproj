@@ -50,22 +50,22 @@
     <ImplicitlyExpandDesignTimeFacades>false</ImplicitlyExpandDesignTimeFacades>
   </PropertyGroup>
   <ItemGroup>
-     <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\ActivateAllChildrenUponGameManagerStart.cs" />
-     <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\AreaSizeCounter.cs" />
-     <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\ConnectedAreaTrigger.cs" />
-     <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\DataPack.cs" />
-     <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\GameManager.cs" />
-     <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\IntermediarySceneManager.cs" />
-     <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\LandmarkAreaStep.cs" />
-     <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\LoadSceneOnTriggerEnter.cs" />
-     <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\PairedAreaFlowerRingRecipe.cs" />
-     <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\PairedAreaSilhouetteRecipe.cs" />
-     <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\PathLengthCounter.cs" />
-     <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\PlayerCharacter\CatMovement.cs" />
-     <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\PlayerCharacter\PlayerInput.cs" />
-     <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\PlayerCharacter\RotateByTime.cs" />
-     <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\SendComment.cs" />
-     <Compile Include="Assets\Samples\Organica Wild\0.0.1\PipelineSamples\Pipeline\SlideManager.cs" />
+     <Compile Include="Assets\Scripts\GameScripts\ActivateAllChildrenUponGameManagerStart.cs" />
+     <Compile Include="Assets\Scripts\GameScripts\ConnectedAreaTrigger.cs" />
+     <Compile Include="Assets\Scripts\GameScripts\DataPack.cs" />
+     <Compile Include="Assets\Scripts\GameScripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\GameScripts\IntermediarySceneManager.cs" />
+     <Compile Include="Assets\Scripts\GameScripts\LoadSceneOnTriggerEnter.cs" />
+     <Compile Include="Assets\Scripts\GameScripts\PlayerCharacter\CatMovement.cs" />
+     <Compile Include="Assets\Scripts\GameScripts\PlayerCharacter\PlayerInput.cs" />
+     <Compile Include="Assets\Scripts\GameScripts\PlayerCharacter\RotateByTime.cs" />
+     <Compile Include="Assets\Scripts\GameScripts\SendComment.cs" />
+     <Compile Include="Assets\Scripts\GameScripts\SlideManager.cs" />
+     <Compile Include="Assets\Scripts\PipelineScripts\AreaSizeCounter.cs" />
+     <Compile Include="Assets\Scripts\PipelineScripts\LandmarkAreaStep.cs" />
+     <Compile Include="Assets\Scripts\PipelineScripts\PairedAreaFlowerRingRecipe.cs" />
+     <Compile Include="Assets\Scripts\PipelineScripts\PairedAreaSilhouetteRecipe.cs" />
+     <Compile Include="Assets\Scripts\PipelineScripts\PathLengthCounter.cs" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Overlay.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap.shader" />
@@ -80,7 +80,7 @@
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Properties.cginc" />
      <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
-     <None Include="Assets\Samples\Organica Wild\0.0.1\SampleAssets\AssetStore\BrokenVector\LowPolyTreePack\README.txt" />
+     <None Include="Assets\StoreAssets\BrokenVector\LowPolyTreePack\README.txt" />
      <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
      <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
