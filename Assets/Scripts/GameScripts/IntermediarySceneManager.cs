@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Random = System.Random;
 
-namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
+namespace GameScripts
 {
     public class IntermediarySceneManager : MonoBehaviour
     {

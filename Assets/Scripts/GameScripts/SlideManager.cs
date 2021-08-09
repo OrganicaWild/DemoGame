@@ -1,28 +1,28 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class SlideManager : MonoBehaviour
+namespace GameScripts
 {
-    public GameObject[] slides;
-    private int currentSlide = 0;
-
-    private void Update()
+    public class SlideManager : MonoBehaviour
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        public GameObject[] slides;
+        private int currentSlide = 0;
+
+        private void Update()
         {
-            NextSlide();
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                NextSlide();
+            }
         }
-    }
 
-    public void NextSlide()
-    {
-        if (currentSlide < slides.Length-1)
+        public void NextSlide()
         {
-            slides[currentSlide].SetActive(false);
-            slides[currentSlide + 1].SetActive(true);
-            currentSlide++;
+            if (currentSlide < slides.Length-1)
+            {
+                slides[currentSlide].SetActive(false);
+                slides[currentSlide + 1].SetActive(true);
+                currentSlide++;
+            }
         }
     }
 }

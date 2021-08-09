@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using GameScripts;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 
 namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline

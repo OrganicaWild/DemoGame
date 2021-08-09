@@ -4,10 +4,11 @@ using Framework.Pipeline.GameWorldObjects;
 using Framework.Pipeline.Geometry;
 using Framework.Pipeline.Standard.ThemeApplicator.Recipe;
 using Framework.Util;
+using GameScripts;
 using UnityEngine;
 using Random = System.Random;
 
-namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
+namespace PipelineScripts
 {
     [CreateAssetMenu(fileName = "PairedAreaFlowerRingRecipe", menuName = "Pipeline/PairedAreaFlowerRingRecipe",
         order = 0)]

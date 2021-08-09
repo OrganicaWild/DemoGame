@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.Analytics;
 using UnityEngine.UI;
 
-namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
+namespace GameScripts
 {
     public class SendComment : MonoBehaviour
     {

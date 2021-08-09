@@ -6,9 +6,10 @@ using Framework.Pipeline.GameWorldObjects;
 using Framework.Pipeline.Geometry;
 using Framework.Pipeline.PipelineGuarantees;
 using Framework.Util.Miscellanous;
+using GameScripts;
 using UnityEngine;
 
-namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
+namespace PipelineScripts
 {
     [MainPathsInAreasGuaranteed]
     public class PathLengthCounter : PipelineStep

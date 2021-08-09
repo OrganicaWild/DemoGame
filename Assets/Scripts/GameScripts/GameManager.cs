@@ -2,13 +2,13 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using Framework.Pipeline.Standard;
-using Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline.PlayerCharacter;
+
 using UnityEngine;
 using UnityEngine.Analytics;
 using UnityEngine.UI;
 using Image = UnityEngine.UI.Image;
 
-namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
+namespace GameScripts
 {
     public class GameManager : MonoBehaviour
     {

@@ -6,12 +6,12 @@ using Framework.Pipeline.GameWorldObjects;
 using Framework.Pipeline.Geometry;
 using Framework.Pipeline.Geometry.Interactors;
 using Framework.Pipeline.PipeLineSteps;
-using Framework.Pipeline.Standard.PipeLineSteps;
 using Framework.Poisson_Disk_Sampling;
+using GameScripts;
 using Polybool.Net.Objects;
 using UnityEngine;
 
-namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
+namespace PipelineScripts
 {
     [LandmarksPlacedGuarantee]
     public class LandmarkAreaStep : PipelineStep

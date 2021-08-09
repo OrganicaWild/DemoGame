@@ -1,7 +1,6 @@
-﻿using Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline;
-using UnityEngine;
+﻿using UnityEngine;
 
-namespace Demo.Pipeline
+namespace GameScripts
 {
     public class ActivateAllChildrenUponGameManagerStart : MonoBehaviour
     {

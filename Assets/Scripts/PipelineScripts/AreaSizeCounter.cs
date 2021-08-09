@@ -5,12 +5,11 @@ using Assets.Scripts.Framework.Pipeline.PipelineGuarantees;
 using Framework.Pipeline;
 using Framework.Pipeline.GameWorldObjects;
 using Framework.Pipeline.Geometry;
-using Framework.Pipeline.Standard.PipeLineSteps;
 using g3;
-using UnityEngine;
-using UnityEngine.Analytics;
+using GameScripts;
 
-namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
+
+namespace PipelineScripts
 {
     [AreasPlacedGuarantee]
     public class AreaSizeCounter : PipelineStep

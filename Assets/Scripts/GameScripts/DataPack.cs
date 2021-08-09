@@ -1,4 +1,4 @@
-namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
+namespace GameScripts
 {
     public class DataPack
     {

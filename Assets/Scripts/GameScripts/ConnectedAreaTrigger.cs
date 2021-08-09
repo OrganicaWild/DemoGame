@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using UnityEditor;
+﻿using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
+namespace GameScripts
 {
     [RequireComponent(typeof(Collider))]
     public class ConnectedAreaTrigger : MonoBehaviour
