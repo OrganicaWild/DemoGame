@@ -302,7 +302,7 @@
  <HintPath>/Applications/Unity/Hub/Editor/2019.4.26f1/Unity.app/Contents/Managed/UnityEditor.dll</HintPath>
  </Reference>
  <Reference Include="Tektosyne.Core">
- <HintPath>/Users/cvoegele/Development/DemoGame/Packages/OrganicaWild/External/PolyBool.Net/Code/Tektosyne.Core.dll</HintPath>
+ <HintPath>/Users/cvoegele/Development/DemoGame/Packages/OrganicaWild/External/Tektosyne/Tektosyne.Core.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>/Applications/Unity/Hub/Editor/2019.4.26f1/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
