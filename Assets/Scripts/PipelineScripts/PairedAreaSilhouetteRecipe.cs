@@ -34,8 +34,8 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
         {
             if (individual.GetShape() is OwPolygon shapePolygon)
             {
-                Random localRandom = new Random(individual.Type.Sum(x => x));
-                var number = int.Parse(individual.Type.Replace("landmarkPair", ""));
+                Random localRandom = new Random(individual.Identifier.Sum(x => x));
+                var number = int.Parse(individual.Identifier.Replace("landmarkPair", ""));
 
                 string arrayContents = "";
                 foreach (GameObject silhouetteDefiningPrefab in silhouetteDefiningPrefabs)
@@ -74,7 +74,7 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
                 collider.size = new Vector3(boundingBox.width, 20, boundingBox.height);
 
                 ConnectedAreaTrigger connectedAreaTrigger = mesh.AddComponent<ConnectedAreaTrigger>();
-                string groupString = individual.Type.Replace("landmarkPair", "");
+                string groupString = individual.Identifier.Replace("landmarkPair", "");
                 connectedAreaTrigger.partOfGroupX = int.Parse(groupString);
                 connectedAreaTrigger.toSpawn = toSpawn;
                 connectedAreaTrigger.spawnPoint = new Vector3(boundingBox.center.x, 2, boundingBox.center.y);

@@ -6,7 +6,7 @@ using Framework.Pipeline.GameWorldObjects;
 using Framework.Pipeline.Geometry;
 using Framework.Pipeline.Geometry.Interactors;
 using Framework.Pipeline.PipeLineSteps;
-using Framework.Poisson_Disk_Sampling;
+using Framework.PoissonDiskSampling;
 using GameScripts;
 using Polybool.Net.Objects;
 using UnityEngine;
@@ -38,7 +38,7 @@ namespace PipelineScripts
                 world.Root.GetAllChildrenOfType<Area>();
 
             List<Area> areasWithLandmarks =
-                areas.Where(area => area.HasAnyChildrenOfType<Landmark>() && area.Type != "start" && area.Type != "end")
+                areas.Where(area => area.HasAnyChildrenOfType<Landmark>() && area.Identifier != "start" && area.Identifier != "end")
                     .ToList();
             int areasWithLandmarksSum = (int) (areasWithLandmarks.Count() * landMarkIsAreaPercentage);
             int pairs = areasWithLandmarksSum / areaXTimes;
@@ -65,7 +65,7 @@ namespace PipelineScripts
 
                 for (int index = 0; index < areaXTimes; index++)
                 {
-                    movedCircle[index] = new OwPolygon(uniqueShape.representation);
+                    movedCircle[index] = new OwPolygon(uniqueShape);
                     movedCircle[index].MovePolygon(chosenLandmarks[index].GetShape().GetCentroid());
                 }
 
@@ -74,7 +74,7 @@ namespace PipelineScripts
                     Landmark chosenLandmarkI = chosenLandmarks[index];
                     OwPolygon movedCircleI = movedCircle[index];
                     chosenLandmarkI.SetShape(movedCircleI);
-                    chosenLandmarkI.Type = $"landmarkPair{pair}";
+                    chosenLandmarkI.Identifier = $"landmarkPair{pair}";
                     areasWithLandmarks.Remove(chosenAreas[index]);
 
                     List<Landmark> allLandmarksInArea = chosenAreas[index].GetAllChildrenOfType<Landmark>().ToList();

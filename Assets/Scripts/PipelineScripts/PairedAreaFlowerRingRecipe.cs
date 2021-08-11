@@ -51,13 +51,13 @@ namespace PipelineScripts
                 collider.size = new Vector3(boundingBox.width, 20, boundingBox.height);
 
                 ConnectedAreaTrigger connectedAreaTrigger = mesh.AddComponent<ConnectedAreaTrigger>();
-                string groupString = individual.Type.Replace("landmarkPair", "");
+                string groupString = individual.Identifier.Replace("landmarkPair", "");
                 connectedAreaTrigger.partOfGroupX = int.Parse(groupString);
                 connectedAreaTrigger.toSpawn = toSpawn;
                 connectedAreaTrigger.spawnPoint = new Vector3(boundingBox.center.x, 2, boundingBox.center.y);
                 connectedAreaTrigger.secondsToWait = secondsToSpawn;
 
-                Random lRandom = new Random(individual.Type.Sum(c => c) + shapePolygon.GetPoints()
+                Random lRandom = new Random(individual.Identifier.Sum(c => c) + shapePolygon.GetPoints()
                     .Sum(p => (int) Mathf.Floor((p - shapePolygon.GetCentroid()).magnitude)));
                 float radiusPerRing = (maxRadius - minRadius) / rings;
 
