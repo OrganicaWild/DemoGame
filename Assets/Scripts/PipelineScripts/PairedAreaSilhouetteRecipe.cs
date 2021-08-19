@@ -43,7 +43,7 @@ namespace Samples.Organica_Wild._0._0._1.PipelineSamples.Pipeline
                     arrayContents += silhouetteDefiningPrefab.name;
                 }
 
-                GameManager.landMarkAreaSilhouettes.Add(arrayContents);
+                //GameManager.landMarkAreaSilhouettes.Add(arrayContents);
 
                 GameObject mesh;
                 try

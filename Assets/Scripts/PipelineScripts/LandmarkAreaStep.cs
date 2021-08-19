@@ -28,6 +28,8 @@ namespace PipelineScripts
 
         public decimal epsilon = 0.0000000000000001m;
 
+        public override bool AddToDebugStackedView => true;
+
         public override Type[] RequiredGuarantees => new Type[] {typeof(LandmarksPlacedGuarantee)};
 
         public override GameWorld Apply(GameWorld world)
@@ -38,7 +40,7 @@ namespace PipelineScripts
                 world.Root.GetAllChildrenOfType<Area>();
 
             List<Area> areasWithLandmarks =
-                areas.Where(area => area.HasAnyChildrenOfType<Landmark>() && area.Identifier != "start" && area.Identifier != "end")
+                areas.Where(area => area.HasAnyChildrenOfType<Landmark>() && area.Identifier != "startArea" && area.Identifier != "endArea")
                     .ToList();
             int areasWithLandmarksSum = (int) (areasWithLandmarks.Count() * landMarkIsAreaPercentage);
             int pairs = areasWithLandmarksSum / areaXTimes;

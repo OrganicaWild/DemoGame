@@ -70,9 +70,9 @@ namespace GameScripts
             Gizmos.color = new Color(1f, 0, 0, .5f);
             if (spawnPoint != Vector3.zero)
             {
-                Gizmos.DrawCube(spawnPoint, Vector3.one);
+                //Gizmos.DrawCube(spawnPoint, Vector3.one);
 #if UNITY_EDITOR
-                Handles.Label(spawnPoint + new Vector3(0, 1, 0), $"{partOfGroupX}", new GUIStyle() {fontSize = 32});
+                //Handles.Label(spawnPoint + new Vector3(0, 1, 0), $"{partOfGroupX}", new GUIStyle() {fontSize = 32});
 #endif
             }
         }
