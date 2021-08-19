@@ -72,14 +72,8 @@
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
  </Reference>
- <Reference Include="Cinemachine">
- <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
- </Reference>
  <Reference Include="Unity.VSCode.Editor">
  <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
- </Reference>
- <Reference Include="Unity.InputSystem">
- <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
  </Reference>
  <Reference Include="Unity.TextMeshPro.Editor">
  <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
@@ -96,14 +90,26 @@
  <Reference Include="Unity.Rider.Editor">
  <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
  </Reference>
- <Reference Include="com.unity.cinemachine.editor">
- <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
- </Reference>
  <Reference Include="Unity.TextMeshPro">
  <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
  </Reference>
  <Reference Include="UnityEditor.UI">
  <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+ </Reference>
+ <Reference Include="Cinemachine">
+ <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.OrganicaWild.Framework">
+ <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/Unity.OrganicaWild.Framework.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.InputSystem">
+ <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/Unity.InputSystem.dll</HintPath>
+ </Reference>
+ <Reference Include="Unity.OrganicaWild.External">
+ <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/Unity.OrganicaWild.External.dll</HintPath>
+ </Reference>
+ <Reference Include="com.unity.cinemachine.editor">
+ <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/com.unity.cinemachine.editor.dll</HintPath>
  </Reference>
  <Reference Include="UnityEngine">
  <HintPath>/Applications/Unity/Hub/Editor/2019.4.26f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -283,7 +289,7 @@
  <HintPath>/Applications/Unity/Hub/Editor/2019.4.26f1/Unity.app/Contents/Managed/UnityEditor.dll</HintPath>
  </Reference>
  <Reference Include="Tektosyne.Core">
- <HintPath>/Users/cvoegele/Development/DemoGame/Packages/OrganicaWild/External/Tektosyne/Tektosyne.Core.dll</HintPath>
+ <HintPath>/Users/cvoegele/Development/DemoGame/Library/PackageCache/ch.i4ds.organicawild@4af7fb882f/External/Tektosyne/Tektosyne.Core.dll</HintPath>
  </Reference>
  <Reference Include="netstandard">
  <HintPath>/Applications/Unity/Hub/Editor/2019.4.26f1/Unity.app/Contents/NetStandard/ref/2.0.0/netstandard.dll</HintPath>
@@ -630,20 +636,6 @@
  <Reference Include="mscorlib">
  <HintPath>/Applications/Unity/Hub/Editor/2019.4.26f1/Unity.app/Contents/NetStandard/compat/2.0.0/shims/netfx/mscorlib.dll</HintPath>
  </Reference>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="Unity.OrganicaWild.Framework.csproj">
-      <Project>{a7dc3000-7ca6-f617-ca53-cb5504bea4ea}</Project>
-      <Name>Unity.OrganicaWild.Framework</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.OrganicaWild.External.csproj">
-      <Project>{42bc60ef-f678-52d0-495e-f751abd78bda}</Project>
-      <Name>Unity.OrganicaWild.External</Name>
-    </ProjectReference>
-    <ProjectReference Include="Unity.OrganicaWild.Editor.csproj">
-      <Project>{a8515d5a-7f5b-01f0-fca3-c1844cf31169}</Project>
-      <Name>Unity.OrganicaWild.Editor</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
