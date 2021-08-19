@@ -6,32 +6,32 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Samples/Organica Wild/0.0.1/PipelineSamples/Scenes/InformationScene.unity
-    guid: cf1a733e148834077ac0d4e31a8e5e40
-  - enabled: 1
-    path: Assets/Samples/Organica Wild/0.0.1/PipelineSamples/Scenes/StartScene.unity
+    path: Assets/Scenes/StartScene.unity
     guid: 8fbcf6d25b055de498822079ff9af023
   - enabled: 1
-    path: Assets/Samples/Organica Wild/0.0.1/PipelineSamples/Scenes/Base.unity
+    path: Assets/Scenes/IntermediaryScene.unity
+    guid: 5bff523d85a0a4c09ab5b939b36eebd3
+  - enabled: 1
+    path: Assets/Scenes/InformationScene.unity
+    guid: cf1a733e148834077ac0d4e31a8e5e40
+  - enabled: 1
+    path: Assets/Scenes/Base.unity
     guid: 7a98ac0a84b1d6c48b2462beed3b0377
   - enabled: 1
-    path: Assets/Samples/Organica Wild/0.0.1/PipelineSamples/Scenes/BigAreas.unity
+    path: Assets/Scenes/BigAreas.unity
     guid: 3eb65c62d0ee14e60a92efdd47eaf6c4
   - enabled: 1
-    path: Assets/Samples/Organica Wild/0.0.1/PipelineSamples/Scenes/Colors.unity
+    path: Assets/Scenes/Colors.unity
     guid: 3caef1be3e67a4cdc87bddc7eb59162a
   - enabled: 1
-    path: Assets/Samples/Organica Wild/0.0.1/PipelineSamples/Scenes/Cycles.unity
+    path: Assets/Scenes/Cycles.unity
     guid: 771346c6c1b4e43799b34c39d5363006
   - enabled: 1
-    path: Assets/Samples/Organica Wild/0.0.1/PipelineSamples/Scenes/LongPaths.unity
+    path: Assets/Scenes/LongPaths.unity
     guid: d99a08a37c7414e21823de777b3843fb
   - enabled: 1
-    path: Assets/Samples/Organica Wild/0.0.1/PipelineSamples/Scenes/Silhouettes.unity
+    path: Assets/Scenes/Silhouettes.unity
     guid: 666aceca17e304058a0c5fed3691b804
-  - enabled: 1
-    path: Assets/Samples/Organica Wild/0.0.1/PipelineSamples/Scenes/IntermediaryScene.unity
-    guid: 5bff523d85a0a4c09ab5b939b36eebd3
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: f8012bb0b9cb94fdab1dd506beb9736d,
       type: 2}
