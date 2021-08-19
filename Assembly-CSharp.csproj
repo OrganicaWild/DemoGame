@@ -66,6 +66,8 @@
      <Compile Include="Assets\Scripts\PipelineScripts\PairedAreaFlowerRingRecipe.cs" />
      <Compile Include="Assets\Scripts\PipelineScripts\PairedAreaSilhouetteRecipe.cs" />
      <Compile Include="Assets\Scripts\PipelineScripts\PathLengthCounter.cs" />
+     <Compile Include="Assets\Visualization\CameraCapture.cs" />
+     <Compile Include="Assets\Visualization\SimpleAreaStep.cs" />
      <None Include="Assets\StoreAssets\BrokenVector\LowPolyTreePack\README.txt" />
  <Reference Include="Unity.Timeline.Editor">
  <HintPath>/Users/cvoegele/Development/DemoGame/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
